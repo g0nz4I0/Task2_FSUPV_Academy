@@ -42,17 +42,17 @@ int main(){
 	ao->add_Action(a);
 	
 	while(true){
-		if(current_state->EBS_Activated()){
-			if(current_state->MissionFinished()){
+		if(EBS_Activated()){
+			if(MissionFinished()){
 				current_state = af;
 			}else{
 				current_state = ae;
 			}
-		}else if(current_state->MissionSelected_ChecksActive()){
-			if(current_state->Ready_To_Drive()){
+		}else if(MissionSelected_ChecksActive()){
+			if(Ready_To_Drive()){
 				current_state = ad;
 			}else{
-				if(current_state->Brakes_Engaged()){
+				if(Brakes_Engaged()){
 					current_state = ar;
 				}else{
 					current_state = ao;
@@ -61,11 +61,6 @@ int main(){
 		}else{
 			current_state = ao;
 		}
-
 		current_state->update();
-		i = rand() % 50;
-		std::this_thread::sleep_for(1000ms);
-
 	}
-
 }

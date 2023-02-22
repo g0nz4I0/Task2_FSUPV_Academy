@@ -7,21 +7,21 @@
 
 #include "statemachine.hpp"
 int i = 0;
-bool State::EBS_Activated(){
+bool EBS_Activated(){
 	//this could call a external function
 	return i%2;
 }
-bool State::MissionFinished(){
+bool MissionFinished(){
 
 	return !(i%2);
 }
-bool State::MissionSelected_ChecksActive(){
+bool MissionSelected_ChecksActive(){
 	return i%3;
 }
-bool State::Ready_To_Drive(){
+bool Ready_To_Drive(){
 	return i%4;
 }
-bool State::Brakes_Engaged(){
+bool Brakes_Engaged(){
 	return !(i%2);
 }
 void State::update(){
