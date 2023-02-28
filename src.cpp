@@ -29,11 +29,11 @@ Action o = [](){
 
 int main(){
 	State* current_state = new State();
-	AS_OFF* ao = new AS_OFF();
-	AS_FINISHED* af = new AS_FINISHED();
-	AS_EMERGENCY* ae = new AS_EMERGENCY();
-	AS_READY* ar = new AS_READY();
-	AS_DRIVING* ad = new AS_DRIVING();
+	State* ao = new State();
+	State* af = new State();
+	State* ae = new State();
+	State* ar = new State();
+	State* ad = new State();
 	ae->add_Action(e);
 	af->add_Action(f);
 	ad->add_Action(d);
