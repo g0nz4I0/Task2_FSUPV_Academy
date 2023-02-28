@@ -26,14 +26,4 @@ struct State
 	void update();
 
 };
-struct AS_OFF : State{
-};
-struct AS_EMERGENCY : State{
 
-};
-struct AS_FINISHED : State{
-};
-struct AS_READY : State{
-};
-struct AS_DRIVING : State{
-};
